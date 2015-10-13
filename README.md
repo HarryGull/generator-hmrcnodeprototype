@@ -47,7 +47,7 @@ $ npm install -g generator-hmrcnodeprototype
 With the generator installed it is time to run it. Create a directory on your computer somewhere and cd into it via the terminal. Then run:
 
 ```
-$ yo generator-prototypeexpress
+$ yo generator-hmrcnodeprototype
 ```
 
 ### Optional starting of the application on completion
