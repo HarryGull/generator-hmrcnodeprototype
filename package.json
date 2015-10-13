@@ -15,7 +15,6 @@
     "type": "git",
     "url": "git://github.com/HarryGull/generator-hmrcnodeprototype.git"
   },
-
   "dependencies": {
     "yeoman-generator": "^0.13.4"
   },
@@ -33,5 +32,5 @@
   },
   "scripts": {
     "test": "mocha"
-  } 
+  }
 }
