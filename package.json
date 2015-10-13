@@ -1,6 +1,6 @@
 {
   "name": "generator-hmrcnodeprototype",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "A generator for Yeoman with HMRC termplate to will kick start a Node Application using Express.",
   "keywords": [
     "yeoman-generator"
