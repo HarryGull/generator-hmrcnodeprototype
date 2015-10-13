@@ -9,11 +9,7 @@
   "bugs": {
     "url": "https://github.com/HarryGull/generator-hmrcnodeprototype/issues"
   },
-  "author": {
-    "name": "Harry",
-    "email": "haryhull@hotmail.com",
-    "url": "https://github.com/HarryGull"
-  },
+  "author": "Harry <haryhull@hotmail.com> (https://github.com/HarryGull)",
   "main": "app/index.js",
   "repository": {
     "type": "git",
@@ -30,5 +26,11 @@
     "node": ">=0.8.0",
     "npm": ">=1.2.10"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }
