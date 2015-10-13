@@ -1,7 +1,7 @@
-# generator-node-express
+# generator-hmrcnodeprototype
 
 A generator for [Yeoman](http://yeoman.io).
-
+This generator will provides an initial HMRC Yeaoman template to generate an initial prototype for Node Express using the govuk frontend toolkit" and govuk template mustache.
 
 ## Getting Started
 
@@ -37,7 +37,8 @@ $ npm uninstall -g yo
 With Node and npm installed run this to install.
 
 ```
-$ npm install -g generator-prototypeexpress
+$ npm install -g generator-hmrcnodeprototype
+
 ```
 
 
@@ -48,5 +49,10 @@ With the generator installed it is time to run it. Create a directory on your co
 ```
 $ yo generator-prototypeexpress
 ```
+
+### Optional starting of the application on completion
+When you run the yo command above Yo will prompt you as to whether you would like to launch the application on completion.
+If you answer yes the application we be started on port 3000 and you can launch it immediatley in your broswer by going to http://localhost:3000
+
 
 
