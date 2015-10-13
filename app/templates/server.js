@@ -68,4 +68,5 @@ app.get(/^\/([^.]+)$/, function (req, res) {
 app.listen(port);
 console.log('');
 console.log('Listening on port ' + port);
+console.log('You can open the browser or ctrl click this link : http://localhost:3000');
 console.log('');
