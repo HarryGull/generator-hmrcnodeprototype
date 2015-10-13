@@ -96,6 +96,7 @@ NodeExpressGenerator.prototype.views = function views() {
   this.copy('views/includes/elements_head.html', 'app/views/includes/elements_head.html');
   this.copy('views/includes/elements_scripts.html', 'app/views/includeselements_scripts.html');
   this.copy('views/includes/examples_head.html', 'app/views/includes/examples_head.html');
+  this.copy('views/includes/head.html', 'app/views/includes/head.html');
   this.copy('views/includes/propositional_navigation.html', 'app/views/includes/propositional_navigation.html');
   this.copy('views/includes/propositional_navigation_alpha.html', 'app/views/includes/propositional_navigation_alpha.html');
   this.copy('views/includes/scripts.html', 'app/views/includes/scripts.html');
