@@ -43,6 +43,7 @@ NodeExpressGenerator.prototype.askFor = function askFor() {
 	}.bind(this));
 };
 
+/*
 NodeExpressGenerator.prototype.routes = function routes() {
   this.copy('routes.js', 'app/routes.js');
 };
@@ -65,8 +66,12 @@ NodeExpressGenerator.prototype.editorConfig = function editorConfig() {
   this.copy('editorconfig', '.editorconfig');
 };
 
+*/
+
+/*
 NodeExpressGenerator.prototype.views = function views() {
   
+
   this.mkdir('app/views');
   this.mkdir('app/views/examples');
   this.mkdir('app/views/examples/elements');
@@ -102,6 +107,7 @@ NodeExpressGenerator.prototype.views = function views() {
   this.copy('views/includes/scripts.html', 'app/views/includes/scripts.html');
 
 };
+
 
 
 NodeExpressGenerator.prototype.docs = function docs() {
@@ -178,6 +184,8 @@ NodeExpressGenerator.prototype.assets = function assets() {
 
  };
 
+*/
+
 
 /*
 NodeExpressGenerator.prototype.app = function app() {
@@ -193,6 +201,7 @@ NodeExpressGenerator.prototype.procfile = function procfile() {
 };
 */
 
+/*
 NodeExpressGenerator.prototype.readme = function readme() {
   this.copy('README.md', 'README.md');
 };
@@ -229,6 +238,8 @@ NodeExpressGenerator.prototype.startjs = function startjs() {
 NodeExpressGenerator.prototype.versiontxt = function versiontxt() {
   this.copy('VERSION.txt', 'VERSION.txt');
 };
+
+*/
 
 /*deExpressGenerator.prototype.startpid = function startpid() {
   this.copy('start.pid', '.start.pid');
