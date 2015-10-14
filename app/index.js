@@ -27,7 +27,7 @@ NodeExpressGenerator.prototype.askFor = function askFor() {
 			name: 'RunOnComplete',
 			type: 'confirm',
 			message: 'Do you want to start the application in localhost on compeltion?',
-			default: false
+			default: true
 		}
 	];
 
