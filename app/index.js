@@ -71,10 +71,10 @@ NodeExpressGenerator.prototype.views = function views() {
   this.mkdir('app/views/examples');
   this.mkdir('app/views/examples/elements');
   this.mkdir('app/views/includes');
-  this.mkdir('app/views/sms');
-  this.mkdir('app/views/wmp');
 
-  this.copy('views/helloworld.html', 'app/views/helloworld.html');
+  this.copy('views/start.html', 'app/views/start.html');
+  this.copy('views/first.html', 'app/views/first.html');
+  this.copy('views/summary.html', 'app/views/summary.html');
   this.copy('views/layout.html', 'app/views/layout.html');
   this.copy('views/original.html', 'app/views/original.html');
   this.copy('views/layout.html', 'app/views/layout.html');
@@ -100,15 +100,6 @@ NodeExpressGenerator.prototype.views = function views() {
   this.copy('views/includes/propositional_navigation.html', 'app/views/includes/propositional_navigation.html');
   this.copy('views/includes/propositional_navigation_alpha.html', 'app/views/includes/propositional_navigation_alpha.html');
   this.copy('views/includes/scripts.html', 'app/views/includes/scripts.html');
-
-
- this.copy('views/sms/page_one.html', 'app/views/sms/page_one.html');
- this.copy('views/sms/page_two.html', 'app/views/sms/page_two.html');
- this.copy('views/sms/page_summary.html', 'app/views/sms/page_summary.html');
-
- this.copy('views/wmp/check_post.html', 'app/views/wmp/check_post.html');
- this.copy('views/wmp/get_all_check_post.html', 'app/views/wmp/get_all_check_post.html');
- this.copy('views/wmp/search.html', 'app/views/wmp/search.html');
 
 };
 
