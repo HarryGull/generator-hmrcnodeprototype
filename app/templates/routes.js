@@ -9,6 +9,10 @@ module.exports = {
       res.render('first');
     });
 
+   app.post('/first', function(req, res){
+        res.redirect(301, 'first');
+    });
+
     app.post('/summary', function(req, res){
         res.redirect(301, 'summary');
     });
