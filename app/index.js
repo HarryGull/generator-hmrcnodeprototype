@@ -43,7 +43,7 @@ NodeExpressGenerator.prototype.askFor = function askFor() {
 	}.bind(this));
 };
 
-/*
+
 NodeExpressGenerator.prototype.routes = function routes() {
   this.copy('routes.js', 'app/routes.js');
 };
@@ -66,9 +66,9 @@ NodeExpressGenerator.prototype.editorConfig = function editorConfig() {
   this.copy('editorconfig', '.editorconfig');
 };
 
-*/
 
-/*
+
+
 NodeExpressGenerator.prototype.views = function views() {
   
 
@@ -77,6 +77,7 @@ NodeExpressGenerator.prototype.views = function views() {
   this.mkdir('app/views/examples/elements');
   this.mkdir('app/views/includes');
 
+/*
   this.copy('views/start.html', 'app/views/start.html');
   this.copy('views/first.html', 'app/views/first.html');
   this.copy('views/summary.html', 'app/views/summary.html');
@@ -105,6 +106,7 @@ NodeExpressGenerator.prototype.views = function views() {
   this.copy('views/includes/propositional_navigation.html', 'app/views/includes/propositional_navigation.html');
   this.copy('views/includes/propositional_navigation_alpha.html', 'app/views/includes/propositional_navigation_alpha.html');
   this.copy('views/includes/scripts.html', 'app/views/includes/scripts.html');
+*/
 
 };
 
@@ -115,6 +117,8 @@ NodeExpressGenerator.prototype.docs = function docs() {
   this.mkdir('docs');
  
   // root doc folder
+  
+/*
   this.copy('docs/creating-routes.md', 'docs/creating-routes.md');
   this.copy('docs/deploying.md', 'docs/deploying.md');
   this.copy('docs/getting-started.md', 'docs/getting-started.md');
@@ -123,7 +127,7 @@ NodeExpressGenerator.prototype.docs = function docs() {
   this.copy('docs/README.md', 'docs/README.md');
   this.copy('docs/tips-and-tricks.md', 'docs/tips-and-tricks.md');
   this.copy('docs/writing-css.md', 'docs/writing-css.md');
- 
+ */
 };
 
 
@@ -131,9 +135,12 @@ NodeExpressGenerator.prototype.lib = function lib() {
   
   this.mkdir('lib'); 
   // root lib folder
+  
+  /*
   this.copy('lib/template-config.js', 'lib/template-config.js');
   this.copy('lib/template-conversion.js', 'lib/template-conversion.js');
   this.copy('lib/template-engine.js', 'lib/template-engine.js'); 
+  */
 };
 
 
@@ -152,6 +159,9 @@ NodeExpressGenerator.prototype.assets = function assets() {
   
 
   // scaffold these by copying in required items
+
+  /*
+
   this.copy('assets/images/favicon.ico', 'app/assets/images/favicon.ico');
   this.copy('assets/images/hmrc_crest_27px.png', 'app/assets/images/hmrc_crest_27px.png');
 
@@ -181,10 +191,8 @@ NodeExpressGenerator.prototype.assets = function assets() {
   this.copy('assets/sass/elements/forms/_form-date.scss', 'app/assets/sass/elements/forms/_form-date.scss');
   this.copy('assets/sass/elements/forms/_form-validation.scss', 'app/assets/sass/elements/forms/_form-validation.scss');
 
-
- };
-
 */
+ };
 
 
 /*
