@@ -10,7 +10,7 @@
 <%
   if (RunOnComplete == true) {%>
   "scripts": {
-    "preinstall" : "node gettoolkit.js",
+    "preinstall" : "gettoolkit.sh",
     "postinstall": "node start.js"
       },<%
 } %>

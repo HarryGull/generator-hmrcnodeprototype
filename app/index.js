@@ -145,7 +145,7 @@ NodeExpressGenerator.prototype.lib = function lib() {
 
 
 NodeExpressGenerator.prototype.gettoolkit = function gettoolkit() {
-  this.copy('gettoolkit.js', 'gettoolkit.js');
+  this.copy('gettoolkit.sh', 'gettoolkit.sh');
 };
 
 NodeExpressGenerator.prototype.assets = function assets() {
