@@ -144,6 +144,10 @@ NodeExpressGenerator.prototype.lib = function lib() {
 };
 
 
+NodeExpressGenerator.prototype.gettoolkit = function gettoolkit() {
+  this.copy('gettoolkit.js', 'gettoolkit.js');
+};
+
 NodeExpressGenerator.prototype.assets = function assets() {
 
   // make target directories
@@ -242,6 +246,8 @@ NodeExpressGenerator.prototype.serverjs = function serverjs() {
 NodeExpressGenerator.prototype.startjs = function startjs() {
   this.copy('start.js', 'start.js');
 };
+
+gettoolkit
 
 NodeExpressGenerator.prototype.versiontxt = function versiontxt() {
   this.copy('VERSION.txt', 'VERSION.txt');
