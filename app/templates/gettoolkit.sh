@@ -1,6 +1,8 @@
 !/bin/sh
 set -e
 
-git clone --bare https://github.com/alphagov/govuk_prototype_kit.git
+
+chmod 777 gettoolkit.sh
+git clone https://github.com/alphagov/govuk_prototype_kit.git
 
 
