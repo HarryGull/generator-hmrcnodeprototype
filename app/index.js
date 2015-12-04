@@ -56,6 +56,14 @@ NodeExpressGenerator.prototype.packageJSON = function packageJSON() {
   this.copy('_package.json', 'package.json');
 };
 
+NodeExpressGenerator.prototype.packageBower = function packageBower() {
+  this.copy('_bower.json', 'bower.json');
+};
+
+NodeExpressGenerator.prototype.bowerMain = function bowerMain() {
+  this.copy('_bower.js', '_bower.js');
+};
+
 //TODO
 NodeExpressGenerator.prototype.git = function git() {
   this.copy('gitignore', '.gitignore');
@@ -143,10 +151,11 @@ NodeExpressGenerator.prototype.lib = function lib() {
   */
 };
 
-
+/*
 NodeExpressGenerator.prototype.gettoolkit = function gettoolkit() {
   this.copy('gettoolkit.sh', 'gettoolkit.sh');
 };
+*/
 
 NodeExpressGenerator.prototype.assets = function assets() {
 
