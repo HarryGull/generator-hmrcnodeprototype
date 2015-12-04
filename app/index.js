@@ -43,7 +43,7 @@ NodeExpressGenerator.prototype.askFor = function askFor() {
 	}.bind(this));
 };
 
-
+/*
 NodeExpressGenerator.prototype.routes = function routes() {
   this.copy('routes.js', 'app/routes.js');
 };
@@ -52,9 +52,13 @@ NodeExpressGenerator.prototype.gruntfile = function gruntfile() {
   this.copy('Gruntfile.js', 'Gruntfile.js');
 };
 
+*/
+
+/*
 NodeExpressGenerator.prototype.packageJSON = function packageJSON() {
   this.copy('_package.json', 'package.json');
 };
+*/
 
 NodeExpressGenerator.prototype.packageBower = function packageBower() {
   this.copy('_bower.json', 'bower.json');
@@ -64,6 +68,7 @@ NodeExpressGenerator.prototype.bowerMain = function bowerMain() {
   this.copy('_bower.js', 'bower.js');
 };
 
+/*
 //TODO
 NodeExpressGenerator.prototype.git = function git() {
   this.copy('gitignore', '.gitignore');
@@ -74,18 +79,19 @@ NodeExpressGenerator.prototype.editorConfig = function editorConfig() {
   this.copy('editorconfig', '.editorconfig');
 };
 
+*/
 
 
 
 NodeExpressGenerator.prototype.views = function views() {
   
-
+/*
   this.mkdir('app/views');
   this.mkdir('app/views/examples');
   this.mkdir('app/views/examples/elements');
   this.mkdir('app/views/includes');
 
-/*
+
   this.copy('views/start.html', 'app/views/start.html');
   this.copy('views/first.html', 'app/views/first.html');
   this.copy('views/summary.html', 'app/views/summary.html');
@@ -122,7 +128,7 @@ NodeExpressGenerator.prototype.views = function views() {
 
 NodeExpressGenerator.prototype.docs = function docs() {
   
-  this.mkdir('docs');
+  //this.mkdir('docs');
  
   // root doc folder
   
@@ -141,7 +147,7 @@ NodeExpressGenerator.prototype.docs = function docs() {
 
 NodeExpressGenerator.prototype.lib = function lib() {
   
-  this.mkdir('lib'); 
+  //this.mkdir('lib'); 
   // root lib folder
   
   /*
@@ -162,6 +168,7 @@ NodeExpressGenerator.prototype.assets = function assets() {
   // make target directories
   
 
+  /*
   this.mkdir('app');
   this.mkdir('app/assets');
   this.mkdir('app/assets/images');
@@ -169,7 +176,7 @@ NodeExpressGenerator.prototype.assets = function assets() {
   this.mkdir('app/assets/sass');
   this.mkdir('app/assets/sass/elements');
   this.mkdir('app/assets/sass/elements/forms');
-  
+  */
 
   // scaffold these by copying in required items
 
