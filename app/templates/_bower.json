@@ -1,5 +1,5 @@
 {
-  "name": "https://github.com/alphagov/govuk_prototype_kit.git",
+  "name": "Bower govuk_prototype_kit.git Install",
   "version": "1.0",
   "homepage": "https://github.com/alphagov/govuk_prototype_kit.git",
   "description": "bower dependencies to install govuk_prototype_kit",
@@ -16,5 +16,8 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "govuk_prototype_kit": "https://github.com/alphagov/govuk_prototype_kit.git#~1.0.0"
+  }
 }

@@ -61,7 +61,7 @@ NodeExpressGenerator.prototype.packageBower = function packageBower() {
 };
 
 NodeExpressGenerator.prototype.bowerMain = function bowerMain() {
-  this.copy('_bower.js', '_bower.js');
+  this.copy('_bower.js', 'bower.js');
 };
 
 //TODO
