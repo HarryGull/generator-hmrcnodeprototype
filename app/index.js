@@ -55,9 +55,11 @@ NodeExpressGenerator.prototype.gruntfile = function gruntfile() {
 */
 
 // install bower dependencies
-var done = this.async();
+
 
 NodeExpressGenerator.prototype.InstallBowerDependencies = function InstallBowerDependencies() {
+
+     var done = this.async();
       bower.commands
       .install()
       .on('end', function(){
