@@ -10,7 +10,7 @@
 <%
   if (RunOnComplete == true) {%>
   "scripts": {
-    "preinstall": "bower install"   	
+    "postinstall": "node start.js"   	
       },<%
 } %>
 
