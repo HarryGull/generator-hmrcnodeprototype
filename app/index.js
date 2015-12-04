@@ -54,11 +54,10 @@ NodeExpressGenerator.prototype.gruntfile = function gruntfile() {
 
 */
 
-/*
+
 NodeExpressGenerator.prototype.packageJSON = function packageJSON() {
   this.copy('_package.json', 'package.json');
 };
-*/
 
 NodeExpressGenerator.prototype.packageBower = function packageBower() {
   this.copy('_bower.json', 'bower.json');
