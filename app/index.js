@@ -81,9 +81,17 @@ NodeExpressGenerator.prototype.editorConfig = function editorConfig() {
 */
 
 
-
 NodeExpressGenerator.prototype.views = function views() {
   
+  this.copy('views/start.html', 'bower_components/govuk_prototype_kit/app/views/start.html');
+  this.copy('views/first.html', 'bower_components/govuk_prototype_kit/app/views/first.html');
+  this.copy('views/summary.html', 'bower_components/govuk_prototype_kit/app/views/summary.html');
+//  this.copy('views/layout.html', 'bower_components/govuk_prototype_kit/app/views/layout.html');
+  this.copy('views/original.html', 'bower_components/govuk_prototype_kit/app/views/original.html');
+  this.copy('views/layout.html', 'bower_components/govuk_prototype_kit/app/views/layout.html');
+  this.copy('views/unbranded.html', 'bower_components/govuk_prototype_kit/app/views/unbranded.html');
+  this.copy('views/unbranded_template.html', 'bower_components/govuk_prototype_kit/app/views/unbranded_template.html');
+
 /*
   this.mkdir('app/views');
   this.mkdir('app/views/examples');

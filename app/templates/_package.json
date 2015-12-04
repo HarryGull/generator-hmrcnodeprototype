@@ -10,7 +10,7 @@
 <%
   if (RunOnComplete == true) {%>
   "scripts": {
-    "preinstall": "bower install"
+    "preinstall": "bower install"   	
       },<%
 } %>
 
