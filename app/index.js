@@ -1,6 +1,7 @@
 var util = require('util');
 var path = require('path');
 var yeoman = require('yeoman-generator');
+var bower = require('bower');
 
 
 var NodeExpressGenerator = module.exports = function NodeExpressGenerator(args, options, config) {
