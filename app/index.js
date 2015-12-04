@@ -57,17 +57,6 @@ NodeExpressGenerator.prototype.gruntfile = function gruntfile() {
 
 // install bower dependencies
 
-
-NodeExpressGenerator.prototype.InstallBowerDependencies = function InstallBowerDependencies() {
-
-     var done = this.async();
-      bower.commands
-      .install()
-      .on('end', function(){
-        done();
-      });
-};
-
 NodeExpressGenerator.prototype.packageJSON = function packageJSON() {
   this.copy('_package.json', 'package.json');
 };
@@ -79,6 +68,19 @@ NodeExpressGenerator.prototype.packageBower = function packageBower() {
 NodeExpressGenerator.prototype.bowerMain = function bowerMain() {
   this.copy('_bower.js', 'bower.js');
 };
+
+
+NodeExpressGenerator.prototype.InstallBowerDependencies = function InstallBowerDependencies() {
+
+     var done = this.async();
+      bower.commands
+      .install()
+      .on('end', function(){
+        done();
+      });
+};
+
+
 
 /*
 //TODO
