@@ -8,7 +8,20 @@ var NodeExpressGenerator = module.exports = function NodeExpressGenerator(args, 
   yeoman.generators.Base.apply(this, arguments);
 
   this.on('end', function () {
-    this.installDependencies({ skipInstall: options['skip-install'] });
+    //this.installDependencies({ skipInstall: options['skip-install'] });
+
+    if (!this.options['skip-install']) {
+
+    // Change working directory to 'toolkit folder' for npm dependencies install
+    var npmdir = process.cwd() + '/bower_components/govuk_prototype_kit';
+    process.chdir(npmdir);
+
+    this.installDependencies({
+      bower: false,
+      npm: true
+    });
+   }
+
   });
 
   this.pkg = JSON.parse(this.readFileAsString(path.join(__dirname, '../package.json')));
@@ -79,21 +92,6 @@ NodeExpressGenerator.prototype.InstallBowerDependencies = function InstallBowerD
         done();
       });
 };
-
-this.on('end', function () {
-  if (!this.options['skip-install']) {
-
-    // Change working directory to 'toolkit folder' for npm dependencies install
-    var npmdir = process.cwd() + '/bower_components/govuk_prototype_kit';
-    process.chdir(npmdir);
-
-    this.installDependencies({
-      bower: false,
-      npm: true
-    });
-  }
-});
-
 
 
 /*
