@@ -80,6 +80,20 @@ NodeExpressGenerator.prototype.InstallBowerDependencies = function InstallBowerD
       });
 };
 
+this.on('end', function () {
+  if (!this.options['skip-install']) {
+
+    // Change working directory to 'toolkit folder' for npm dependencies install
+    var npmdir = process.cwd() + '/bower_components/govuk_prototype_kit';
+    process.chdir(npmdir);
+
+    this.installDependencies({
+      bower: false,
+      npm: true
+    });
+  }
+});
+
 
 
 /*
