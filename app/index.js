@@ -13,6 +13,8 @@ var NodeExpressGenerator = module.exports = function NodeExpressGenerator(args, 
     if (!this.options['skip-install']) {
 
     // Change working directory to 'toolkit folder' for npm dependencies install
+
+    var origWorkingDirectory = process.cwd();
     var npmdir = process.cwd() + '/bower_components/govuk_prototype_kit';
     process.chdir(npmdir);
 
@@ -20,6 +22,9 @@ var NodeExpressGenerator = module.exports = function NodeExpressGenerator(args, 
       bower: false,
       npm: true
     });
+
+     process.chdir(origWorkingDirectory);
+
    }
 
   });
@@ -68,18 +73,20 @@ NodeExpressGenerator.prototype.gruntfile = function gruntfile() {
 
 */
 
-// install bower dependencies
+
 
 /*
 NodeExpressGenerator.prototype.packageJSON = function packageJSON() {
   this.copy('_package.json', 'package.json');
 };
 
+*/
+
+// copy bower fles to install toolkit prototype dependencies
 NodeExpressGenerator.prototype.packageBower = function packageBower() {
   this.copy('_bower.json', 'bower.json');
 };
 
-*/
 
 NodeExpressGenerator.prototype.bowerMain = function bowerMain() {
   this.copy('_bower.js', 'bower.js');

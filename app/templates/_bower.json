@@ -18,6 +18,6 @@
     "tests"
   ],
   "dependencies": {
-    "govuk_prototype_kit": "https://github.com/alphagov/govuk_prototype_kit.git#~1.0.0"
+    "govuk_prototype_kit": "https://github.com/alphagov/govuk_prototype_kit.git#latest"
   }
 }
