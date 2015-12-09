@@ -2,6 +2,9 @@
 // Take a look at elements.scss to see which files are imported.
 @import 'elements';
 
+// Take a look at patterns.scss to see which files are imported.
+@import 'patterns';
+
 // Set up your main content area <main id="content">
 // This will give you a full width content block
 // See elements _layout.scss line 7.
@@ -11,10 +14,10 @@
 
 // If you need a phase banner, put this inside the main content area
 // See elements _layout.scss line 22.
-.alpha-banner  {
+.phase-banner-alpha  {
   @include phase-banner(alpha); // Change this to (beta) for a beta banner
 }
-.alpha-tag {
+.phase-tag-alpha {
   @include phase-tag(alpha); // Change this to (beta) for a beta tag
 }
 
@@ -33,47 +36,22 @@
   }
 }
 
-.organisation-logo, .organisation-logo-stacked {
-  font-family: Helvetica,Arial;
-  font-weight: 400;
-  display: block;
-  position: relative;
-  font-size: 13px;
-  line-height: 15px;
-  text-decoration: none;
-  padding: 3px 0 2px 30px;
-  background-image: url(../images/icons/crests/hmrc_crest_13px.png);
-  background-position: 5px center;
-  background-size: auto 20px;
-  background-repeat: no-repeat;
-  border-left: 2px solid #009390;
-}
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you,
 // either add and import new partial files, or modify those in GOV.UK elements to fit your user needs.
-@media (min-width: 641px){
-  .organisation-logo-medium {
-  font-family: Helvetica,Arial;
-  font-weight: 400;
-  display: block;
-  position: relative;
-  font-size: 13px;
-  line-height: 15px;
-  text-decoration: none;
-  padding: 3px 0 2px 30px;
-  background-image: url(../images/icons/crests/hmrc_crest_13px.png);
-  background-position: 5px center;
-  background-size: auto 20px;
-  background-repeat: no-repeat;
-  border-left: 2px solid #009390;
-  font-size: 18px;
-  line-height: 20px;
-  padding: 3px 0 2px 38px;
-  background-image: url(/public/images/hmrc_crest_27px.png);
-  background-position: 6px center;
-  background-size: auto 25px;
-  background-repeat: no-repeat;
-  border-left: 2px solid #009390;
-  -webkit-font-smoothing: antialiased;
-  width: 10em;
+
+// Related links
+// (These styles will be moved to GOV.UK elements, duplicating here for now.)
+.related-links {
+  margin-top: $gutter;
+  border-top: 10px solid $govuk-blue;
+  padding-top: 5px;
+
+  .heading-medium {
+    margin-top: 0.3em;
+    margin-bottom: 0.5em
+  }
+
+  li {
+    margin-bottom: 10px;
   }
 }

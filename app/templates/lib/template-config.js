@@ -4,14 +4,18 @@ module.exports = {
   bodyClasses: "{{$bodyClasses}}{{/bodyClasses}}",
   bodyEnd: "{{$bodyEnd}}{{/bodyEnd}}",
   content: "{{$content}}{{/content}}",
-  cookieMessage: "{{$cookieMessage}}{{/cookieMessage}}",
+  cookieMessage: "{{$cookieMessage}}<p>GOV.UK uses cookies to make the site simpler. <a href='#'>Find out more about cookies</a></p>{{/cookieMessage}}",
+  crownCopyrightMessage: "{{$crownCopyrightMessage}}© Crown copyright{{/crownCopyrightMessage}}",
   footerSupportLinks: "{{$footerSupportLinks}}{{/footerSupportLinks}}",
   footerTop: "{{$footerTop}}{{/footerTop}}",
+  globalHeaderText: "{{$globalHeaderText}}GOV.UK{{/globalHeaderText}}",
   head: "{{$head}}{{/head}}",
   headerClass: "{{$headerClass}}{{/headerClass}}",
-  insideHeader: "{{$insideHeader}}{{/insideHeader}}",
   homepageUrl: "{{$homepageUrl}}https://www.gov.uk{{/homepageUrl}}",
-  globalHeaderText: "{{$globalHeaderText}}GOV.UK{{/globalHeaderText}}",
+  insideHeader: "{{$insideHeader}}{{/insideHeader}}",
+  licenceMessage: "{{$licenceMessage}}<p>All content is available under the <a href='https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/' rel='license'>Open Government Licence v3.0</a>, except where otherwise stated</p>{{/licenceMessage}}",
+  logoLinkTitle: "{{$logoLinkTitle}}Go to the GOV.UK homepage{{/logoLinkTitle}}",
   pageTitle: "{{$pageTitle}}GOV.UK - The best place to find government services and information{{/pageTitle}}",
-  propositionHeader: "{{$propositionHeader}}{{/propositionHeader}}"
+  propositionHeader: "{{$propositionHeader}}{{/propositionHeader}}",
+  skipLinkMessage: "{{$skipLinkMessage}}Skip to main content{{/skipLinkMessage}}"
 };

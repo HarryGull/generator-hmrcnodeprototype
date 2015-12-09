@@ -1,7 +1,6 @@
 function ShowHideContent() {
   var self = this;
 
-
   self.escapeElementName = function(str) {
     result = str.replace('[', '\\[').replace(']', '\\]')
     return(result);
@@ -114,19 +113,13 @@ function ShowHideContent() {
 
 $(document).ready(function() {
 
-  // Turn off jQuery animation
-  jQuery.fx.off = true;
-
   // Use GOV.UK selection-buttons.js to set selected
   // and focused states for block labels
   var $blockLabels = $(".block-label input[type='radio'], .block-label input[type='checkbox']");
   new GOVUK.SelectionButtons($blockLabels);
 
-  // Details/summary polyfill
-  // See /javascripts/vendor/details.polyfill.js
-
+  // Show and hide toggled content
   // Where .block-label uses the data-target attribute
-  // to toggle hidden content
   var toggleContent = new ShowHideContent();
   toggleContent.showHideRadioToggledContent();
   toggleContent.showHideCheckboxToggledContent();

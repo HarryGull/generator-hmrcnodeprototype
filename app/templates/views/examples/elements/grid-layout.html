@@ -1,13 +1,9 @@
-{{<govuk_template}}
-
-{{$head}}
-  {{>includes/elements_head}}
-{{/head}}
+{{<layout}}
 
 {{$content}}
 <main id="content" role="main">
 
-  <a href="/examples/" class="example-back-link">Back to the GOV.UK prototype kit examples</a>
+  {{>includes/breadcrumb_examples}}
 
   <h1 class="heading-xlarge">
     New grid layout example
@@ -120,4 +116,4 @@
 </main>
 {{/content}}
 
-{{/govuk_template}}
+{{/layout}}
