@@ -62,10 +62,11 @@ NodeExpressGenerator.prototype.askFor = function askFor() {
 	}.bind(this));
 };
 
-
+/*
 NodeExpressGenerator.prototype.routes = function routes() {
   this.copy('routes.js', 'bower_components/govuk_prototype_kit/app/routes.js');
 };
+*/
 
 /*
 NodeExpressGenerator.prototype.gruntfile = function gruntfile() {
