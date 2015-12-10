@@ -1,26 +1,28 @@
-var path  = require('path'),
+var path = require('path'),
     express = require('express'),
     routes = require(__dirname + '/app/routes.js'),
+    bodyParser = require('body-parser');
     favicon = require('serve-favicon'),
     app = express(),
-    basicAuth = require('basic-auth'),
-    bodyParser = require('body-parser'),
+    basicAuth = require('basic-auth-connect'),
     port = (process.env.PORT || 3000),
-    utils = require(__dirname + '/lib/utils.js'),
+    session = require('express-session'),
 
 // Grab environment variables specified in Procfile or as Heroku config vars
     username = process.env.USERNAME,
     password = process.env.PASSWORD,
-    env      = process.env.NODE_ENV || 'development',
-    useAuth  = process.env.USE_AUTH || 'true';
+    env = process.env.NODE_ENV || 'development';
 
-    env      = env.toLowerCase();
-    useAuth  = useAuth.toLowerCase();
+    app.use(session({secret: 'ddssshhhhh'}));
 
-// Authenticate against the environment-provided credentials if running
+// Authenticate against the environment-provided credentials, if running
 // the app in production (Heroku, effectively)
-if (env === 'production' && useAuth === 'true'){
-    app.use(utils.basicAuth(username, password));
+if (env === 'production') {
+  if (!username || !password) {
+    console.log('Username or password is not set, exiting.');
+    process.exit(1);
+  }
+  app.use(basicAuth(username, password));
 }
 
 // Application settings
@@ -37,18 +39,16 @@ app.use('/public/images/icons', express.static(__dirname + '/govuk_modules/govuk
 // Elements refers to icon folder instead of images folder
 
 app.use(favicon(path.join(__dirname, 'govuk_modules', 'govuk_template', 'assets', 'images','favicon.ico')));
-
-// Support for parsing data in POSTs
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({
-  extended: true
-}));
+
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // send assetPath to all views
 app.use(function (req, res, next) {
   res.locals.assetPath="/public/";
   next();
 });
+
 
 // routes (found in app/routes.js)
 
@@ -64,16 +64,16 @@ if (typeof(routes) != "function"){
 
 app.get(/^\/([^.]+)$/, function (req, res) {
 
-  var path = (req.params[0]);
+	var path = (req.params[0]);
 
-  res.render(path, function(err, html) {
-    if (err) {
-      console.log(err);
-      res.sendStatus(404);
-    } else {
-      res.end(html);
-    }
-  });
+	res.render(path, function(err, html) {
+		if (err) {
+			console.log(err);
+			res.sendStatus(404);
+		} else {
+			res.end(html);
+		}
+	});
 
 });
 

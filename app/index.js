@@ -86,7 +86,6 @@ NodeExpressGenerator.prototype.views = function views() {
   this.copy('views/summary.html', 'app/views/summary.html');
   this.copy('views/layout.html', 'app/views/layout.html');
   this.copy('views/original.html', 'app/views/original.html');
-  this.copy('views/layout.html', 'app/views/layout.html');
   this.copy('views/unbranded.html', 'app/views/unbranded.html');
   this.copy('views/unbranded_template.html', 'app/views/unbranded_template.html');
 
@@ -150,7 +149,7 @@ NodeExpressGenerator.prototype.lib = function lib() {
   this.copy('lib/template-config.js', 'lib/template-config.js');
   this.copy('lib/template-conversion.js', 'lib/template-conversion.js');
   this.copy('lib/template-engine.js', 'lib/template-engine.js'); 
-  this.copy('lib/utils.js', 'lib/template-engine.js'); 
+  this.copy('lib/utils.js', 'lib/utils.js'); 
 };
 
 
