@@ -73,7 +73,7 @@ NodeExpressGenerator.prototype.views = function views() {
   this.mkdir('app/views/includes');
 
   this.copy('views/start.html', 'app/views/start.html');
-  this.copy('views/scenariabout-company-twoos.html', 'app/views/scenarios.html');
+  this.copy('views/scenarios.html', 'app/views/scenarios.html');
   this.copy('views/layout.html', 'app/views/layout.html');
   this.copy('views/unbranded.html', 'app/views/unbranded.html');
   this.copy('views/unbranded_template.html', 'app/views/unbranded_template.html');
