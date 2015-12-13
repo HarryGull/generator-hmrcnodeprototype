@@ -1,0 +1,76 @@
+{{<layout}}
+
+{{$pageTitle}}
+	Prototype - About the person
+{{/pageTitle}}
+
+{{$content}}
+
+<main id="content" role="main">
+  <!-- Banner -->
+  <div class="phase-banner">
+    <p>
+      <strong class="phase-tag">ALPHA</strong>
+      <span>This is a new service – your <a href="https://designpatterns.hackpad.com/GOV.UK-elements-feedback-sKrDyQxcfA2">feedback</a> will help us to improve it.</span>
+    </p>
+  </div>
+  <div class="logo"></div>
+  <span class="organisation-logo organisation-logo-medium">HM Revenue &amp; Customs</span><!-- /Banner -->
+  <!-- About person form -->
+  <form action="/examples/about-person-session" method="post" class="form">
+  	<!-- Back button -->
+  	<div class = "form-group-compound">   
+    	<a id="back" class="link-back" href="javascript:history.back()">Back</a>
+  	</div><!-- /Back button -->
+  	<!-- Title -->
+    <h1 class="form-title heading-xlarge">About the person this scheme relates to</h1>
+    <!-- Full name -->
+    <fieldset class="inline">
+		<legend class="font-medium">Full name</legend>
+	    <span class="form-hint">Including any middle names</span>
+	    <div class="form-group">
+	    	<input class="form-control" id="fullname" name="fullname" type="text"/>
+		</div>
+	</fieldset><!-- /Full name -->
+    <!-- Address -->
+	<fieldset class="inline">
+		<legend class="font-medium">Enter their address</legend>
+		<!-- Line 1 -->
+	    <div class="form-group">
+	        <span class="form-hint">This should be their current address</span>
+	    	<label class="form-label" for="address-1">Address Line 1</label>
+	    	<input class="form-control" id="address-1" name="address1" type="text"/>
+		</div><!-- /Line 1 -->
+		<!-- Line 2 -->
+		<div class="form-group">
+	    	<label class="form-label" for="address-2">Address Line 2</label>
+	    	<input class="form-control" id="address-1" name="address2" type="text"/>
+	    </div><!-- /Line 2 -->
+	    <!-- Line 3 -->
+	    <div class="form-group">
+	    	<label class="form-label" for="address-3">Address Line 3</label>
+	    	<input class="form-control" id="address-1" name="address3" type="text"/>
+	    </div><!-- /Line 3 -->
+	    <!-- Line 4 -->
+	    <div class="form-group">	
+	    	<label class="form-label" for="address-4">Address Line 4</label>
+	    	<input class="form-control" id="address-1" name="address4" type="text"/>
+	    </div><!-- /Line 4 -->
+	    <!-- postcode -->
+	    <div class="form-group">	
+	        <label class="form-label" for="postcode">Postcode</label>
+	        <div class ="grid-row column-two-thirds inline">
+	        	<input class="form-control" type="text" id="postcode" name="postcode" value=""/>
+	        </div>
+	    </div><!-- /postcode -->
+	</fieldset><!-- /Address -->
+	<!-- Next button -->
+    <div class = "form-group">   
+      <button class ="btn button" type="next">Next</button>
+    </div><!-- /Next button -->
+  </form><!-- /About person form -->
+</main><!-- / #page-container -->
+
+{{/content}}
+
+{{/layout}}

@@ -38,7 +38,49 @@
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you,
 // either add and import new partial files, or modify those in GOV.UK elements to fit your user needs.
-
+.organisation-logo, .organisation-logo-stacked {
+  font-family: Helvetica,Arial;
+  font-weight: 400;
+  display: block;
+  position: relative;
+  font-size: 13px;
+  line-height: 15px;
+  text-decoration: none;
+  padding: 3px 0 2px 30px;
+  background-image: url(../images/icons/crests/hmrc_crest_13px.png);
+  background-position: 5px center;
+  background-size: auto 20px;
+  background-repeat: no-repeat;
+  border-left: 2px solid #009390;
+}
+@media (min-width: 641px){
+  .organisation-logo-medium {
+  font-family: Helvetica,Arial;
+  font-weight: 400;
+  display: block;
+  position: relative;
+  font-size: 13px;
+  line-height: 15px;
+  text-decoration: none;
+  padding: 3px 0 2px 30px;
+  background-image: url(../images/icons/crests/hmrc_crest_13px.png);
+  background-position: 5px center;
+  background-size: auto 20px;
+  background-repeat: no-repeat;
+  border-left: 2px solid #009390;
+  font-size: 18px;
+  line-height: 20px;
+  padding: 3px 0 2px 38px;
+  background-image: url(/public/images/hmrc_crest_27px.png);
+  background-position: 6px center;
+  background-size: auto 25px;
+  background-repeat: no-repeat;
+  border-left: 2px solid #009390;
+  -webkit-font-smoothing: antialiased;
+  width: 10em;
+  white-space: nowrap;
+  }
+}
 // Related links
 // (These styles will be moved to GOV.UK elements, duplicating here for now.)
 .related-links {

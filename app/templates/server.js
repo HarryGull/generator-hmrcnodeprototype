@@ -1,7 +1,7 @@
 var path = require('path'),
     express = require('express'),
     routes = require(__dirname + '/app/routes.js'),
-    bodyParser = require('body-parser');
+    bodyParser = require('body-parser'),
     favicon = require('serve-favicon'),
     app = express(),
     basicAuth = require('basic-auth-connect'),
@@ -13,7 +13,13 @@ var path = require('path'),
     password = process.env.PASSWORD,
     env = process.env.NODE_ENV || 'development';
 
-    app.use(session({secret: 'ddssshhhhh'}));
+// for secret change value to project name such as dds, scrs etc..
+app.use(session({
+  secret: 'projectAbbreviation',
+  resave : false,
+  saveUninitialized : false
+}));
+
 
 // Authenticate against the environment-provided credentials, if running
 // the app in production (Heroku, effectively)
@@ -40,7 +46,6 @@ app.use('/public/images/icons', express.static(__dirname + '/govuk_modules/govuk
 
 app.use(favicon(path.join(__dirname, 'govuk_modules', 'govuk_template', 'assets', 'images','favicon.ico')));
 app.use(bodyParser.json());
-
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // send assetPath to all views
@@ -82,5 +87,6 @@ app.get(/^\/([^.]+)$/, function (req, res) {
 app.listen(port);
 console.log('');
 console.log('Listening on port ' + port);
-console.log('You can open the browser or ctrl click this link : http://localhost:3000');
+console.log('You can open the browser or ctrl click this link : http://localhost:'+ port);
 console.log('');
+

@@ -45,35 +45,26 @@ NodeExpressGenerator.prototype.askFor = function askFor() {
 
 NodeExpressGenerator.prototype.copyRootFiles = function copyRootFiles() {
   
+  console.log("Creating app template application root files...");
   this.copy('gitignore', '.gitignore');
   this.copy('Gruntfile.js', 'Gruntfile.js');
   this.copy('Procfile', 'Procfile');
   this.copy('README.md', 'README.md');
   this.copy('_package.json', 'package.json');
   this.copy('server.js', 'server.js');
-  this.copy('start.js', 'start.js');
-
-  /*
-  // not required for our templated version as not contributing to the gov uk protoype toolkit
-  this.copy('CONTRIBUTING.md', 'CONTRIBUTING.md');
-  this.copy('LICENCE.txt', 'LICENCE.txt');
-  this.copy('VERSION.txt', 'VERSION.txt');
-  this.copy('editorconfig', '.editorconfig');
-  this.copy('CHANGELOG.md', 'CHANGELOG.md');
-  */
-  
+  this.copy('start.js', 'start.js');  
 };
 
 NodeExpressGenerator.prototype.routes = function routes() {
   
-  console.log("Creating app directcory and the application routes file...");
+  console.log("Creating app directory and the application routes file...");
   this.mkdir('app')
   this.copy('routes.js', 'app/routes.js');
 };
 
 NodeExpressGenerator.prototype.views = function views() {
   
-  console.log("Scaffolding the appplication views...");
+  console.log("Scaffolding the application views...");
   console.log("Creating the app/views folders and copying view content files...");
   this.mkdir('app')
   this.mkdir('app/views');
@@ -82,25 +73,24 @@ NodeExpressGenerator.prototype.views = function views() {
   this.mkdir('app/views/includes');
 
   this.copy('views/start.html', 'app/views/start.html');
-  this.copy('views/first.html', 'app/views/first.html');
-  this.copy('views/summary.html', 'app/views/summary.html');
+  this.copy('views/scenariabout-company-twoos.html', 'app/views/scenarios.html');
   this.copy('views/layout.html', 'app/views/layout.html');
-  this.copy('views/original.html', 'app/views/original.html');
   this.copy('views/unbranded.html', 'app/views/unbranded.html');
   this.copy('views/unbranded_template.html', 'app/views/unbranded_template.html');
 
   console.log("Creating the view/examples folder and copying its content files...");  
-  this.copy('views/examples/blank.html', 'app/views/examples/blank.html');
-  this.copy('views/examples/blank-govuk.html', 'app/views/examples/blank-govuk.html');
-  this.copy('views/examples/blank-unbranded.html', 'app/views/examples/blank-unbranded.html');
-  this.copy('views/examples/check-your-answers-page.html', 'app/views/examples/check-your-answers-page.html');
-  this.copy('views/examples/confirmation-page.html', 'app/views/examples/confirmation-page.html');
-  this.copy('views/examples/index.html', 'app/views/examples/index.html');
-  this.copy('views/examples/question-page.html', 'app/views/examples/question-page.html');
-  this.copy('views/examples/start-page.html', 'app/views/examples/start-page.html');
-  this.copy('views/examples/template-data.html', 'app/views/examples/template-data.html');
-  this.copy('views/examples/template-partial-areas.html', 'app/views/examples/template-partial-areas.html');
-  this.copy('views/examples/unbranded.html', 'app/views/examples/unbranded.html');
+  this.copy('views/examples/about-company.html', 'app/views/examples/about-company.html');
+  this.copy('views/examples/about-company-session.html', 'app/views/examples/about-company-session.html');
+  this.copy('views/examples/about-company-two.html', 'app/views/examples/about-company-two.html');
+  this.copy('views/examples/about-company-two-session.html', 'app/views/examples/about-company-two-session.html');
+  this.copy('views/examples/about-person.html', 'app/views/examples/about-person.html');
+  this.copy('views/examples/about-person-session.html', 'app/views/examples/about-person-session.html');
+  this.copy('views/examples/about-person-two.html', 'app/views/examples/about-person-two.html');
+  this.copy('views/examples/about-person-two-session.html', 'app/views/examples/about-person-two-session.html');
+  this.copy('views/examples/about-service.html', 'app/views/examples/about-service.html');
+  this.copy('views/examples/about-service-session.html', 'app/views/examples/about-service-session.html');
+  this.copy('views/examples/summary.html', 'app/views/examples/summary.html');
+  this.copy('views/examples/summary-session.html', 'app/views/examples/summary-session.html');
 
 
   console.log("Creating the view/examples/elements folder and copying its content files..."); 
@@ -119,26 +109,6 @@ NodeExpressGenerator.prototype.views = function views() {
   this.copy('views/includes/scripts.html', 'app/views/includes/scripts.html');
 };
 
-
-NodeExpressGenerator.prototype.docs = function docs() {
-  
-  console.log("Scaffolding the docs folder...");  
-  console.log("Creating the docs folder and copying its content files...");  
-
-  this.mkdir('docs');
- 
-  // root doc folder
-  this.copy('docs/creating-routes.md', 'docs/creating-routes.md');
-  this.copy('docs/deploying.md', 'docs/deploying.md');
-  this.copy('docs/getting-started.md', 'docs/getting-started.md');
-  this.copy('docs/making-pages.md', 'docs/making-pages.md');
-  this.copy('docs/principles.md', 'docs/principles.md');
-  this.copy('docs/README.md', 'docs/README.md');
-  this.copy('docs/tips-and-tricks.md', 'docs/tips-and-tricks.md');
-  this.copy('docs/writing-css.md', 'docs/writing-css.md');
-};
-
-
 NodeExpressGenerator.prototype.lib = function lib() {
   
   console.log("Scaffolding the lib folder...");  
@@ -156,7 +126,7 @@ NodeExpressGenerator.prototype.lib = function lib() {
 NodeExpressGenerator.prototype.assets = function assets() {
 
   console.log("Scaffolding the app/assets folder...");  
-  console.log("Creating the app/assests folder and copying its content files...");  
+  console.log("Creating the app/assets folder and copying its content files...");  
 
   // scaffold all target directories
   this.mkdir('app');
@@ -171,28 +141,28 @@ NodeExpressGenerator.prototype.assets = function assets() {
   
 
   // scaffold these by copying in all the required items from the template folders to the tyarget app folders:
-  // assests/images
+  // assets/images
   console.log("copying the assets/images content files...");   
   this.copy('assets/images/favicon.ico', 'app/assets/images/favicon.ico');
   this.copy('assets/images/hmrc_crest_27px.png', 'app/assets/images/hmrc_crest_27px.png');
   this.copy('assets/images/separator.png', 'app/assets/images/separator.png');
   this.copy('assets/images/separator-2x.png', 'app/assets/images/separator-2x.png');
 
-  // assests/javascripts
+  // assets/javascripts
   console.log("copying the assets/javascripts content files...");   
   this.copy('assets/javascripts/application.js', 'app/assets/javascripts/application.js');
   this.copy('assets/javascripts/details.polyfill.js', 'app/assets/javascripts/details.polyfill.js');
   this.copy('assets/javascripts/jquery-1.11.3.js', 'app/assets/javascripts/jquery-1.11.3.js');
   this.copy('assets/javascripts/govuk/selection-buttons.js', 'app/assets/javascripts/govuk/selection-buttons.js');
 
-  // assests/sass
-   console.log("copying the assets/sass content files...");   
+  // assets/sass
+  console.log("copying the assets/sass content files...");   
   this.copy('assets/sass/application.scss', 'app/assets/sass/application.scss');
   this.copy('assets/sass/elements.scss', 'app/assets/sass/elements.scss');
   this.copy('assets/sass/examples.scss', 'app/assets/sass/examples.scss');
   this.copy('assets/sass/patterns.scss', 'app/assets/sass/patterns.scss');
 
-   console.log("copying the assets/sass/elements content files...");   
+  console.log("copying the assets/sass/elements content files...");   
   this.copy('assets/sass/elements/_breadcrumb.scss', 'app/assets/sass/elements/_breadcrumb.scss');
   this.copy('assets/sass/elements/_buttons.scss', 'app/assets/sass/elements/_buttons.scss');
   this.copy('assets/sass/elements/_components.scss', 'app/assets/sass/elements/_components.scss'); 

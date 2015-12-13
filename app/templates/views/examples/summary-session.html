@@ -1,0 +1,115 @@
+{{<layout}}
+
+{{$pageTitle}}
+  Prototype - Check your answers
+{{/pageTitle}}
+
+{{$content}}
+
+<main id="content" role="main">
+  <!-- Banner -->
+  <div class="phase-banner">
+    <p>
+      <strong class="phase-tag">ALPHA</strong>
+      <span>This is a new service – your <a href="https://designpatterns.hackpad.com/GOV.UK-elements-feedback-sKrDyQxcfA2">feedback</a> will help us to improve it.</span>
+    </p>
+  </div>
+  <div class="logo"></div>
+  <span class="organisation-logo organisation-logo-medium">HM Revenue &amp; Customs</span><!-- /Banner -->
+  <!-- About service form -->
+  <form action="/examples/summary-session" method="post" class="form">
+    <!-- Back button -->
+    <div class = "form-group-compound">   
+      <a id="back" class="link-back" href="javascript:history.back()">Back</a>
+    </div><!-- /Back button -->
+    <!-- Title -->
+    <h2 class="form-title heading-large">Check your answers</h2>
+
+    <div class="form-group">
+      <table>
+        <tbody>
+          <tr>
+              <th>Question</th>
+              <th>Answer</th>
+              <th/>
+          </tr>
+          <tr>
+              <td>Service name</td>
+              <td>{{service}}</td>
+              <td><a href="/examples/about-service-session">change</a></td>
+          </tr>
+
+          <tr>
+              <td>Service Reference Number</td>
+              <td>{{SRN}}</td>
+              <td><a href="/examples/about-service-session">change</a></td>
+          </tr>
+
+          <tr>
+              <td>Who does this service relate to</td>
+              <td>{{indOrComp}}</td>
+              <td><a href="/examples/about-service-session">change</a></td>
+          </tr>
+
+          <tr>
+              <td  style="vertical-align:top">Name and Address</td>
+              <td  style="vertical-align:top">{{fullname}}<br/>
+                  {{address1}}<br/>
+                  {{address2}}<br/>
+                  {{address3}}<br/>
+                  {{address4}}<br/>
+                  {{postcode}}
+              </td>
+              <!-- Change the change link depending on whether an company or individual -->
+              <td  style="vertical-align:top">
+                {{#isCompany}}<a href="/examples/about-company-session">change</a>{{/isCompany}}
+                {{#isIndividual}}<a href="/examples/about-person-session">change</a>{{/isIndividual}}
+              </td>
+          </tr>
+
+          <tr>
+              <td>Phone number</td>
+              <td>{{phone}}</td>
+              <td>
+                <!-- Change the change link depending on whether an company or individual -->
+                {{#isCompany}}<a href="/examples/about-company-two-session">change</a>{{/isCompany}}
+                {{#isIndividual}}<a href="/examples/about-person-two-session">change</a>{{/isIndividual}}          
+              </td>
+          </tr>
+
+          <tr>
+          <!-- Change the date label depending on whether an company or individual  -->
+              <td>{{#isCompany}}Date company started trading{{/isCompany}}{{#isIndividual}}Date of birth{{/isIndividual}}</td>
+              <td>{{dateDday}} {{dateMonth}} {{dateYear}}</td>
+              <td><a href="/examples/about-person-two-session">change</a></td>
+          </tr>
+          
+           <!-- Only render the NINO row if it's an individual -->
+          {{#isIndividual}}
+          <tr>
+              <td>National Insurance number</td>
+              <td>{{nino}}</td>
+              <td><a href="/examples/about-person-two-session">change</a></td>
+          </tr>
+          {{/isIndividual}}
+        </tbody>
+      </table>
+     
+      <!-- Example of pre-populating a check box (similar approach can be used for radio button too)-->
+      <!-- pre check the check box if an individual --> 
+      <label class="form-checkbox" for="forwardFreeCheckingService">
+        <input id="forwardFreeCheckingService" type="checkbox"
+               name="forwardFreeCheckingService" value="{{isIndividual}}" {{#isIndividual}} checked="checked"{{/isIndividual}}>
+        pre-populated checked if an individual
+      </label>
+    </div>
+    <!-- Next button -->
+    <div class="form-group">
+        <button class ="btn button" type "next">Submit</button>
+    </div>
+  </form>
+</main>
+
+{{/content}}
+
+{{/layout}}

@@ -1,0 +1,63 @@
+{{<layout}}
+
+{{$pageTitle}}
+	Prototype - About the company - 2
+{{/pageTitle}}
+
+{{$content}}
+
+<main id="content" role="main">
+  <!-- Banner -->
+  <div class="phase-banner">
+    <p>
+      <strong class="phase-tag">ALPHA</strong>
+      <span>This is a new service – your <a href="https://designpatterns.hackpad.com/GOV.UK-elements-feedback-sKrDyQxcfA2">feedback</a> will help us to improve it.</span>
+    </p>
+  </div>
+  <div class="logo"></div>
+  <span class="organisation-logo organisation-logo-medium">HM Revenue &amp; Customs</span><!-- /Banner -->
+  <!-- About you two form -->
+  <form action="/examples/about-company-two" method="post" class="form">
+    <!-- Back button -->
+    <div class = "form-group-compound">   
+      <a id="back" class="link-back" href="javascript:history.back()">Back</a>
+    </div><!-- /Back button -->
+    <!-- Title -->
+    <h1 class="form-title heading-xlarge">About the company this scheme relates to - continued</h1>
+    <fieldset>
+          <legend class="visuallyhidden">About the company this scheme relates to - continued</legend>
+      <!-- Contact phone -->
+      <div class="form-group">
+          <label class="form-label" for="telephone-number">Contact telephone number</label>
+          <input class="form-control" id="telephone-number" name="phone" type="number">
+      </div><!-- /Contact phone -->
+      <!-- Date of Birth radio -->
+      <div class="form-group">
+        <label class="form-label">Date company started trading</label>      
+        <label class="form-hint">For example, 24 4 1998</label>
+        <div class="form-date">
+          <div class="form-group form-group-day">
+            <label for="date-day">Day</label>
+            <input type="number" maxlength="2" class="form-control" id="date-day" max="31" min="1" name="dateDay">
+          </div>
+          <div class="form-group form-group-month">
+            <label for="date-month">Month</label>
+            <input type="number" maxlength="2" class="form-control" id="date-month" max="12" min="1" name="dateMonth">
+          </div>
+          <div class="form-group form-group-year">
+            <label for="date-year">Year</label>
+            <input type="number" maxlength="4" class="form-control" id="date-year" min="1900" step="1" name="dateYear">
+          </div>
+        </div>
+      </div><!-- /Date of trading -->
+    </fieldset>
+    <!-- Next button -->
+    <div class="form-group">
+        <button class ="btn button" type "next">Next</button>
+    </div><!-- /Next button -->
+  </form><!-- /About you two form -->
+</main><!-- / #page-container -->
+
+{{/content}}
+
+{{/layout}}

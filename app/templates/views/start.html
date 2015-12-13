@@ -1,7 +1,6 @@
 {{<layout}}
-
 {{$pageTitle}}
-	HMRC Node Prototype
+  Prototype - Welcome page
 {{/pageTitle}}
 
 {{$content}}
@@ -14,15 +13,37 @@
       <span>This is a new service – your <a href="https://designpatterns.hackpad.com/GOV.UK-elements-feedback-sKrDyQxcfA2">feedback</a> will help us to improve it.</span>
     </p>
   </div>
+  
   <div class="logo">
-        <span class="organisation-logo organisation-logo-medium">HM Revenue &amp; Customs</span>
-    </div>
-  <form action="/first" method="post" class="form">
+        <span style="white-space:nowrap" class="organisation-logo organisation-logo-medium">HM Revenue &amp; Customs</span>
+  </div>
+  
+  <form action="/start" method="post" class="form">
 
-    <h1 class="form-title heading-large">
-      Application Heading
-    </h1>    
-    <button type="submit" class="button">Start</button>
+   
+    <h1 class="form-title heading-large">Generated prototype - Sample application</h1>
+
+    <p>This prototype example application will flow through a series of prototype screens. <br>
+    It aims to demonstrate the following:</p>
+    <ul class="list-bullet">
+      <li>Use of some typical controls and layout used in a Gov.UK prototyping application.<br>
+      You can find out more about the GDI standards here: <a href=" http://govuk-elements.herokuapp.com/"> GOV.UK elements</a></li>
+      <li>Some standard ways of handling specific features such as revealing content <br>(e.g. toggled sections based on data choices).</li>
+      <li>Persisting entered data for later display later and conditional navigation.</li>
+      <li>Using mustache notation to change rendered html page elements based on saved form data passed.</li>
+    </ul>
+    
+    <p>Once you/your team are familiar with this sample application please remove the it by replacing the <span>app/view/examples folder with your project specific one and removing the sample routes in app/routes.js</p>
+
+    <p>Lets get started with the sample application:</p>
+    <p class="bold-small">
+      Click start to view the sample application.
+    </p>
+
+    <br/>
+    <div class ="form-group">  
+    <button type="submit" class="button button-get-started">Start now</button>
+    </div>
   </form>
 
 </main><!-- / #page-container -->

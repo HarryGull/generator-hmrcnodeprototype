@@ -1,0 +1,91 @@
+{{<layout}}
+
+{{$pageTitle}}
+	Prototype - About the service
+{{/pageTitle}}
+
+{{$content}}
+
+<main id="content" role="main">
+  <!-- Banner -->
+  <div class="phase-banner">
+    <p>
+      <strong class="phase-tag">ALPHA</strong>
+      <span>This is a new service – your <a href="https://designpatterns.hackpad.com/GOV.UK-elements-feedback-sKrDyQxcfA2">feedback</a> will help us to improve it.</span>
+    </p>
+  </div>
+  <div class="logo"></div>
+  <span class="organisation-logo organisation-logo-medium">HM Revenue &amp; Customs</span><!-- /Banner -->
+  <!-- About service form -->
+  
+  <form action="/examples/about-service-session" method="post" class="form">
+    <!-- Back button -->
+    <div class = "form-group-compound">   
+      <a id="back" class="link-back" href="javascript:history.back()">Back</a>
+    </div><!-- /Back button -->
+    <!-- Title -->
+    <h1 class="form-title heading-large">Descriptive page heading</h1>
+
+    <p class="lede">Lead paragraph with introductory information.</p>
+
+    <!-- Service name -->
+    <div class="form-group">
+      <label class="form-label" for="service">Service name</label>
+      <input class="form-control" id="service" name="service" type="text">
+    </div>
+    <div class="form-group">
+      <details>
+        <summary><span class="summary">Don't have a Service name?</span></summary>
+        <div class="panel-indent">
+          <p>
+            If you are not part of a current Service, please contact the fictional Services Assistance Helpline on +44300 999 999988767
+          </p>
+        </div>
+      </details>
+    </div>
+
+    <div class="form-label">
+      <span class="heading-medium">Do you have a service reference number?</span>
+      <span class="form-hint">If you have been sent one please select Yes to enter.</span>
+    </div>
+    <fieldset class="inline">
+      <legend class="visuallyhidden">Do you have a service reference Number?</legend>
+      <div class="form-group">
+        <label class="block-label" data-target="divService" for="hasServiceYes">
+          <input id="hasServiceYes" name="hasService" value="yes" type="radio">
+          Yes
+        </label>
+        <label class="block-label" for="hasServiceNo">
+          <input id="hasServiceNo" name="hasService" value="no" type="radio" checked="true">
+          No
+        </label>
+        <!-- Hidden panel that reveals on Yes radio button selection -->
+        <div class="panel-indent js-hidden" id="divService">
+            <span class="form-label">Service Reference Number</span> 
+            <input type="number" class="form-control form-control-0-9" id="Service" name="Service" maxlength="10">
+        </div><!-- /end  hidden panel -->
+      </div>
+    </fieldset><!-- /Service radio -->
+    <!-- Individual or Company radio -->
+    <span class="heading-medium">Who does this service relate to?</span>
+    <fieldset class="inline">
+      <legend class="visuallyhidden">Who does this service relate to?</legend>
+      <label class="block-label" for="indOrComp-Ind">
+        <input id="indOrComp-Ind" name="indOrComp" value="individual" type="radio">
+        An individual
+      </label>
+      <label class="block-label" for="indOrComp-Comp">
+        <input id="indOrComp-Comp" name="indOrComp" value="company" type="radio">
+        A company
+      </label>
+    </fieldset><!-- /Individual or Company radio -->
+    <!-- Next button -->
+    <div class="form-group">
+        <button class ="btn button" type "next">Next</button>
+    </div><!-- /Next button -->
+  </form><!-- About service form -->
+</main><!-- / #page-container -->
+
+{{/content}}
+
+{{/layout}}

@@ -1,0 +1,95 @@
+{{<layout}}
+
+{{$pageTitle}}
+  Prototype - Check your answers
+{{/pageTitle}}
+
+{{$content}}
+
+<main id="content" role="main">
+  <!-- Banner -->
+  <div class="phase-banner">
+    <p>
+      <strong class="phase-tag">ALPHA</strong>
+      <span>This is a new service – your <a href="https://designpatterns.hackpad.com/GOV.UK-elements-feedback-sKrDyQxcfA2">feedback</a> will help us to improve it.</span>
+    </p>
+  </div>
+  <div class="logo"></div>
+  <span class="organisation-logo organisation-logo-medium">HM Revenue &amp; Customs</span><!-- /Banner -->
+  <!-- About service form -->
+  <form action="/examples/summary" method="post" class="form">
+    <!-- Back button -->
+    <div class = "form-group-compound">   
+      <a id="back" class="link-back" href="javascript:history.back()">Back</a>
+    </div><!-- /Back button -->
+    <!-- Title -->
+    <h2 class="form-title heading-large">Check your answers</h2>
+
+    <div class="form-group">
+      <table>
+        <tbody>
+          <tr>
+              <th>Question</th>
+              <th>Answer</th>
+              <th/>
+          </tr>
+          <tr>
+              <td>Service name</td>
+              <td>Test Service</td>
+              <td><a href="/examples/about-service">change</a></td>
+          </tr>
+
+          <tr>
+              <td>Service Reference Number</td>
+              <td>123456789</td>
+              <td><a href="/examples/about-service">change</a></td>
+          </tr>
+
+          <tr>
+              <td>Who does this service relate to</td>
+              <td>Individual</td>
+              <td><a href="/examples/about-service">change</a></td>
+          </tr>
+
+          <tr>
+              <td  style="vertical-align:top">Name and Address</td>
+              <td  style="vertical-align:top">
+                  Frederick John Smith<br/>
+                  21 Somewhere Street<br/>
+                  Wellington<br/>
+                  Telford<br/>
+                  TF1 4ER
+              </td>
+              <td  style="vertical-align:top"><a href="/examples/about-person">change</a></td>
+          </tr>
+
+          <tr>
+              <td>Phone number</td>
+              <td>01654 222444</td>
+              <td><a href="/examples/about-person-two">change</a></td>
+          </tr>
+
+          <tr>
+              <td>Date of birth</td>
+              <td>4 12 1984</td>
+              <td><a href="/examples/about-person-two">change</a></td>
+          </tr>
+          <tr>
+              <td>National Insurance number</td>
+              <td>NB5533A</td>
+              <td><a href="/examples/about-person-two">change</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Next button -->
+    <div class="form-group">
+        <button class ="btn button" type "next">Submit</button>
+    </div>
+  </form>
+</main>
+
+{{/content}}
+
+{{/layout}}
