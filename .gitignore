@@ -1,2 +1,57 @@
+### Node ###
+logs
+*.log
+npm-debug.log*
+pids
+*.pid
+*.seed
+.lock-wscript
+build/Release
+node_modules
+
+
+### Yeoman ###
 node_modules/
+bower_components/
+*.log
+build/
+dist/
 temp/
+
+
+### OSX ###
+.DS_Store
+.AppleDouble
+.LSOverride
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+._*
+Icon
+
+
+### Linux ###
+*~
+.directory
+.Trash-*
+
+
+### Windows ###
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+*.lnk
+

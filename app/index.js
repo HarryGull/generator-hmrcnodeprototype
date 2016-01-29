@@ -2,15 +2,25 @@ var util = require('util');
 var path = require('path');
 var yeoman = require('yeoman-generator');
 
+/*
+var wiring = require("html-wiring");
+var mkdirp = require('mkdirp');
+*/
 
 var NodeExpressGenerator = module.exports = function NodeExpressGenerator(args, options, config) {
   yeoman.generators.Base.apply(this, arguments);
 
-  this.on('end', function () {
+/* 
+ this.on('end', function () {
     this.installDependencies({ skipInstall: options['skip-install'] });
   });
+*/
 
+ // this.pkg = JSON.parse(wiring.readFileAsString(path.join(__dirname, '../package.json'))); 
+ 
+  console.log(this.yeoman);
   this.pkg = JSON.parse(this.readFileAsString(path.join(__dirname, '../package.json')));
+   
 };
 
 util.inherits(NodeExpressGenerator, yeoman.generators.Base);
@@ -185,3 +195,9 @@ NodeExpressGenerator.prototype.assets = function assets() {
   
   this.copy('assets/sass/patterns/check-your-answers.scss', 'app/assets/sass/patterns/check-your-answers.scss');
  };
+
+NodeExpressGenerator.prototype.install = function install() {
+  // Install Grunt and Bower dependencies
+  this.installDependencies({ skipInstall: this.skipInstall });
+};
+
