@@ -1,7 +1,7 @@
 {
   "name": "generator-hmrcnodeprototype",
-  "version": "0.0.43",
-  "description": "A generator for Yeoman with HMRC template to will kick start a Node Application using Express.",
+  "version": "0.0.44",
+  "description": "A generator for Yeoman with HMRC template to will kick start a Node Application using Express and mutache templates.",
   "keywords": [
     "yeoman-generator"
   ],
@@ -13,7 +13,7 @@
   "main": "app/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/hmrc/generator-hmrc-prototype-kit"
+    "url": "https://github.com/HarryGull/generator-hmrcnodeprototype"
   },
   "dependencies": {
     "yeoman-generator": "^0.20.3"

@@ -3,7 +3,6 @@
 A generator for [Yeoman](http://yeoman.io).
 Yeoman template to generate an initial node Express prototype using the govuk frontend toolkit and govuk mustache template.
 
-[![Build Status](https://travis-ci.org/hmrc/generator-hmrc-prototype-kit.svg?branch=master)](https://travis-ci.org/hmrc/generator-hmrc-prototype-kit) [![devDependency Status](https://david-dm.org/hmrc/generator-hmrc-prototype-kit/dev-status.svg)](https://david-dm.org/hmrc/generator-hmrc-prototype-kit#info=devDependencies)
 
 ## Getting Started
 
